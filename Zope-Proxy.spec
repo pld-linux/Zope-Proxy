@@ -6,7 +6,7 @@ License:	ZPL 2.1
 Group:		Libraries/Python
 Source0:	http://download.zope.org/distribution/zope.proxy-%{version}.tar.gz
 # Source0-md5:	a9e234e90bc4a16bb62b967d4a0412c6
-URL:		http://pypi.python.org/pypi/zope.proxy/3.5.1
+URL:		http://www.zope.org/
 BuildRequires:	python
 BuildRequires:	python-devel
 %pyrequires_eq	python-modules
