@@ -1,19 +1,23 @@
-Summary:	zope.proxy package used in Zope 3
+Summary:	Mostly-transparent wrappers around another object
 Name:		Zope-Proxy
 Version:	3.4.0
-Release:	0.1
-License:	ZPL 2.0
-Group:		Development/Tools
+Release:	1
+License:	ZPL 2.1
+Group:		Libraries/Python
 Source0:	http://download.zope.org/distribution/zope.proxy-%{version}.tar.gz
 # Source0-md5:	a9e234e90bc4a16bb62b967d4a0412c6
 URL:		http://pypi.python.org/pypi/zope.proxy/3.5.1
 BuildRequires:	python
 BuildRequires:	python-devel
 %pyrequires_eq	python-modules
+Requires:	Zope-Interface
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-zope.proxy package used in Zope 3.
+Proxies are special objects which serve as mostly-transparent wrappers
+around another object, intervening in the apparent behavior of the wrapped
+object only when necessary to apply the policy (e.g., access checking,
+location brokering, etc.) for which the proxy is responsible.
 
 %prep
 %setup -q -n zope.proxy-%{version}
