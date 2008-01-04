@@ -33,6 +33,7 @@ obudowywanego obiektu tylko w razie potrzeby, aby zastosować politykę
 %setup -q -n zope.proxy-%{version}
 
 %build
+export CFLAGS="%{rpmcflags}"
 python ./setup.py build
 
 %install
@@ -43,12 +44,20 @@ python ./setup.py install \
 	--root=$RPM_BUILD_ROOT
 
 %py_postclean
+rm $RPM_BUILD_ROOT%{py_sitedir}/zope/proxy/*.[ch]
+rm -r $RPM_BUILD_ROOT%{py_sitedir}/zope/proxy/tests
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{py_sitedir}/zope/proxy
+%dir %{py_sitedir}/zope/proxy
+%{py_sitedir}/zope/proxy/*.cfg
+%{py_sitedir}/zope/proxy/*.py[co]
+%attr(755,root,root) %{py_sitedir}/zope/proxy/_zope_proxy_proxy.so
 %{py_sitedir}/zope.proxy-*.egg-info
 %{py_sitedir}/zope.proxy-*-nspkg.pth
+
+# -devel?
+#%{py_incdir}/zope.proxy
