@@ -1,12 +1,12 @@
 Summary:	Mostly-transparent wrappers around another object
 Summary(pl.UTF-8):	Prawie przezroczyste obudowywanie innych obiektów
 Name:		Zope-Proxy
-Version:	3.4.0
-Release:	2
+Version:	3.4.2
+Release:	1
 License:	ZPL 2.1
 Group:		Libraries/Python
-Source0:	http://download.zope.org/distribution/zope.proxy-%{version}.tar.gz
-# Source0-md5:	a9e234e90bc4a16bb62b967d4a0412c6
+Source0:	http://pypi.python.org/packages/source/z/zope.proxy/zope.proxy-%{version}.zip
+# Source0-md5:	ad51f25d4d86be7cfebb70bd77421f92
 URL:		http://www.zope.org/
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
