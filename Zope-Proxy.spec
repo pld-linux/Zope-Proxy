@@ -12,6 +12,7 @@ BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	unzip
 %pyrequires_eq	python-modules
 Requires:	Zope-Interface
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
