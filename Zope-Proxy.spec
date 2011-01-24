@@ -10,6 +10,7 @@ Source0:	http://pypi.python.org/packages/source/z/zope.proxy/zope.proxy-%{versio
 URL:		http://www.zope.org/
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
+BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	unzip
