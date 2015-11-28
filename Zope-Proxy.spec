@@ -35,15 +35,12 @@ obudowywanego obiektu tylko w razie potrzeby, aby zastosować politykę
 %setup -q -n zope.proxy-%{version}
 
 %build
-export CFLAGS="%{rpmcflags}"
-python ./setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python ./setup.py install \
-	--optimize 2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %py_postclean
 rm $RPM_BUILD_ROOT%{py_sitedir}/zope/proxy/*.[ch]
