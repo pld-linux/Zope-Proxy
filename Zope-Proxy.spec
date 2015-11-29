@@ -12,7 +12,7 @@ BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	unzip
 %pyrequires_eq	python-modules
 Requires:	Zope-Interface
